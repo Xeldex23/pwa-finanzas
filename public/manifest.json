@@ -1,0 +1,16 @@
+{
+  "name": "Sistema de Control Multimoneda",
+  "short_name": "Finanzas",
+  "description": "Terminal financiero personal",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
