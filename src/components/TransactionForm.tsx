@@ -51,7 +51,7 @@ export function TransactionForm({ onSuccess }: { onSuccess: () => void }) {
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label>Tipo de Movimiento</Label>
-          <Select value={type} onValueChange={setType}>
+          <Select value={type} onValueChange={(val) => setType(val || 'ingreso')}>
             <SelectTrigger className="border-zinc-800 bg-zinc-900"><SelectValue /></SelectTrigger>
             <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-100">
               <SelectItem value="ingreso">Ingreso</SelectItem>
@@ -63,7 +63,7 @@ export function TransactionForm({ onSuccess }: { onSuccess: () => void }) {
         </div>
         <div className="space-y-2">
           <Label>Moneda</Label>
-          <Select value={currency} onValueChange={setCurrency}>
+          <Select value={currency} onValueChange={(val) => setCurrency(val || 'PEN')}>
             <SelectTrigger className="border-zinc-800 bg-zinc-900"><SelectValue /></SelectTrigger>
             <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-100">
               <SelectItem value="PEN">PEN (Soles)</SelectItem>
