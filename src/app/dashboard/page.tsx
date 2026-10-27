@@ -72,8 +72,8 @@ export default function Dashboard() {
         </div>
       </header>
       
-      <main className="grid gap-6 md:grid-cols-3">
-        <div className="md:col-span-2 border border-zinc-800 bg-zinc-950 p-6 rounded-lg">
+      <main className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-full">
+        <div className="lg:col-span-2 border border-zinc-800 bg-zinc-950 p-4 sm:p-6 rounded-lg min-w-0">
           <h2 className="text-sm font-semibold text-zinc-300 mb-6 border-b border-zinc-800 pb-2">/ NUEVA TRANSACCIÓN</h2>
           <TransactionForm onSuccess={loadData} />
         </div>
@@ -98,7 +98,7 @@ export default function Dashboard() {
           )}
         </div>
 
-        <div className="md:col-span-3 mt-4">
+        <div className="lg:col-span-3 mt-4 min-w-0 w-full overflow-hidden">
           <h2 className="text-sm font-semibold text-zinc-300 mb-4 border-b border-zinc-800 pb-2">/ LIBRO MAYOR (HISTORIAL)</h2>
           {loading ? (
             <p className="text-xs text-zinc-500 animate-pulse">Consultando bloques...</p>
