@@ -23,7 +23,7 @@ export function TransactionHistory({ transactions }: { transactions: Transaction
   }
 
   return (
-    <div className="border border-zinc-800 bg-zinc-950 rounded-lg overflow-hidden">
+    <div className="border border-zinc-800 bg-zinc-950 rounded-lg w-full overflow-x-auto">
       <Table>
         <TableHeader className="bg-zinc-900">
           <TableRow className="border-zinc-800 hover:bg-zinc-900">
