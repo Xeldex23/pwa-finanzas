@@ -89,19 +89,23 @@ export function TransactionForm({ onSuccess }: { onSuccess: () => void }) {
             </SelectContent>
           </Select>
         </div>
-        <div className="col-span-2 space-y-2">
+        <div className="md:col-span-2 space-y-2">
           <Label>Categoría</Label>
           <Select value={category} onValueChange={(val) => setCategory(val || 'Otros')}>
             <SelectTrigger className="border-zinc-800 bg-zinc-900 text-zinc-100">
               <SelectValue placeholder="Selecciona categoría" />
             </SelectTrigger>
             <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-100">
-              <SelectItem value="Sueldo base">Sueldo base</SelectItem>
-              <SelectItem value="Comida">Comida</SelectItem>
-              <SelectItem value="Gasto comun">Gasto comun</SelectItem>
-              <SelectItem value="Inversion ETFs">Inversión ETFs</SelectItem>
+              <SelectItem value="Sueldo">Sueldo</SelectItem>
+              <SelectItem value="Apoyo Familiar">Apoyo Familiar</SelectItem>
+              <SelectItem value="Rendimientos">Rendimientos</SelectItem>
+              <SelectItem value="Alquiler">Alquiler</SelectItem>
+              <SelectItem value="Alimentacion">Alimentación</SelectItem>
+              <SelectItem value="Suscripciones">Suscripciones</SelectItem>
+              <SelectItem value="Salud/Dentista">Salud/Dentista</SelectItem>
               <SelectItem value="Transporte">Transporte</SelectItem>
-              <SelectItem value="Educacion">Educación</SelectItem>
+              <SelectItem value="Electronica">Electrónica</SelectItem>
+              <SelectItem value="Gastos Hormiga">Gastos Hormiga</SelectItem>
               <SelectItem value="Otros">Otros</SelectItem>
             </SelectContent>
           </Select>
