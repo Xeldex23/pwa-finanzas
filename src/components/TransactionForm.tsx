@@ -77,11 +77,34 @@ export function TransactionForm({ onSuccess }: { onSuccess: () => void }) {
         </div>
         <div className="space-y-2">
           <Label>Cuenta destino/origen</Label>
-          <Input placeholder="Ej: BCP, Hapi, Efectivo" value={account} onChange={(e) => setAccount(e.target.value)} required className="border-zinc-800 bg-zinc-900" />
+          <Select value={account} onValueChange={(val) => setAccount(val || 'BCP')}>
+            <SelectTrigger className="border-zinc-800 bg-zinc-900 text-zinc-100">
+              <SelectValue placeholder="Selecciona cuenta" />
+            </SelectTrigger>
+            <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-100">
+              <SelectItem value="BCP">BCP</SelectItem>
+              <SelectItem value="Yape">Yape</SelectItem>
+              <SelectItem value="Hapi">Hapi</SelectItem>
+              <SelectItem value="Efectivo">Efectivo</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
         <div className="col-span-2 space-y-2">
           <Label>Categoría</Label>
-          <Input placeholder="Ej: Sueldo, Comida, ETFs" value={category} onChange={(e) => setCategory(e.target.value)} required className="border-zinc-800 bg-zinc-900" />
+          <Select value={category} onValueChange={(val) => setCategory(val || 'Otros')}>
+            <SelectTrigger className="border-zinc-800 bg-zinc-900 text-zinc-100">
+              <SelectValue placeholder="Selecciona categoría" />
+            </SelectTrigger>
+            <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-100">
+              <SelectItem value="Sueldo base">Sueldo base</SelectItem>
+              <SelectItem value="Comida">Comida</SelectItem>
+              <SelectItem value="Gasto comun">Gasto comun</SelectItem>
+              <SelectItem value="Inversion ETFs">Inversión ETFs</SelectItem>
+              <SelectItem value="Transporte">Transporte</SelectItem>
+              <SelectItem value="Educacion">Educación</SelectItem>
+              <SelectItem value="Otros">Otros</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
       <Button type="submit" className="w-full bg-zinc-100 text-zinc-900 hover:bg-zinc-200" disabled={loading}>

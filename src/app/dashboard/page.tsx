@@ -64,7 +64,7 @@ export default function Dashboard() {
     <div className="min-h-screen bg-zinc-950 text-zinc-50 p-6 sm:p-12 font-mono">
       <header className="mb-8 border-b border-zinc-800 pb-4 flex justify-between items-center">
         <div>
-          <h1 className="text-xl font-bold text-zinc-100">~/finanzas/dashboard_$</h1>
+          <h1 className="text-xl font-bold text-zinc-100">finanzas/Xeldex</h1>
           <p className="text-xs text-zinc-500 mt-1">SISTEMA DE CONTROL MULTIMONEDA v1.0</p>
         </div>
         <div className="text-xs text-zinc-400 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800">
