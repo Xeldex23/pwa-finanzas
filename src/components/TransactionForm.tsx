@@ -48,7 +48,7 @@ export function TransactionForm({ onSuccess }: { onSuccess: () => void }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label>Tipo de Movimiento</Label>
           <Select value={type} onValueChange={(val) => setType(val || 'ingreso')}>
